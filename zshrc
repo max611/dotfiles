@@ -15,7 +15,6 @@ export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
 
 alias be="bundle exec"
 alias test="ruby -I test"
-alias shopify-dev='/Users/haeky/src/github.com/Shopify/shopify-cli-internal/bin/shopify'
 
 plugins=(git)
 
@@ -44,14 +43,3 @@ fco() {
         --ansi) || return
   git checkout $(awk '{print $2}' <<<"$target" )
 }
-
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/haeky/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/haeky/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/haeky/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/haeky/google-cloud-sdk/completion.zsh.inc'; fi
-
-# cloudplatform: add Shopify clusters to your local kubernetes config
-export KUBECONFIG=${KUBECONFIG:+$KUBECONFIG:}$HOME/.kube/config:$HOME/.kube/config.shopify.cloudplatform
-if [ -e /Users/haeky/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/haeky/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
