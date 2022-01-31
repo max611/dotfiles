@@ -26,5 +26,5 @@ if [ ! -d ~/fonts ]; then
     ~/fonts/install.sh
 fi
 
-ln -fs ~/dotfiles/blinks.zsh-theme ~/.oh-my-zsh/custom/themes/
-vim -E -u NONE -S ~/.vimrc +PluginInstall +qall
+ln -fs ~/dotfiles/powerlevel10k.zsh-theme ~/.oh-my-zsh/custom/themes/
+
