@@ -12,10 +12,6 @@ if [ ! -d ~/.fzf ]; then
     ~/.fzf/install
 fi
 
-if [ "$(uname)" != "Darwin" ]; then
-  sudo apt-get -y install ripgrep
-fi
-
 for f in `ls . `
 do
     if [[ $f == "install.sh" ]] ; then
@@ -24,10 +20,6 @@ do
 
     ln -fs ~/dotfiles/$f ~/.${f}
 done
-
-if [ ! -d ~/.vim/plugin/Vundle.vim ]; then
-    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/plugin/Vundle.vim
-fi
 
 if [ ! -d ~/fonts ]; then
     git clone https://github.com/powerline/fonts.git ~/fonts
