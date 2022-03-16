@@ -16,6 +16,10 @@ if [ ! -d ~/.fzf ]; then
     ~/.fzf/install
 fi
 
+if [ ! -d ~/powerlevel10k ]; then
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+fi
+
 for f in `ls . `
 do
     if [[ $f == "install.sh" ]] ; then
