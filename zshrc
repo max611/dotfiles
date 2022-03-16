@@ -12,6 +12,7 @@ ZSH=$HOME/.oh-my-zsh
 export LC_ALL="en_US.UTF-8"
 export GOPATH=$HOME
 
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 ZSH_THEME="powerlevel10k/powerlevel10k"
 alias tmux="TERM=screen-256color-bce tmux"
 alias k="kubectl"
