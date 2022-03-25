@@ -1,16 +1,3 @@
-[core]
-	commitGraph = true
-[diff]
-	algorithm = patience
-[gc]
-	writeCommitGraph = true
-[protocol]
-	version = 2
-[url "https://github.com/Shopify/"]
-	insteadOf = git@github.com:Shopify/
-	insteadOf = git@github.com:shopify/
-	insteadOf = ssh://git@github.com/Shopify/
-	insteadOf = ssh://git@github.com/shopify/
 [alias]
 puf     = "!git push --force-with-lease=\"$(git rev-parse --abbrev-ref HEAD)\""
 pu      = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
@@ -18,4 +5,6 @@ pu      = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
 	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 [user]
 	name = Max St-Onge
-	email = maxstonge@gmail.com
+	email = max.stonge@shopify.com
+[include]
+	path = /Users/maxstonge/.config/dev/gitconfig
