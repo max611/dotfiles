@@ -6,5 +6,8 @@ pu      = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
 [user]
 	name = Max St-Onge
 	email = max.stonge@shopify.com
+	signingkey = C11958676A49B7FC632373CC2F40EF2E1951AB36!
 [include]
 	path = /Users/maxstonge/.config/dev/gitconfig
+[commit]
+	gpgsign = true
