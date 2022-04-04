@@ -11,6 +11,7 @@ ZSH=$HOME/.oh-my-zsh
 
 export LC_ALL="en_US.UTF-8"
 export GOPATH=$HOME
+export GPG_TTY=$(tty)
 
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 ZSH_THEME="powerlevel10k/powerlevel10k"
