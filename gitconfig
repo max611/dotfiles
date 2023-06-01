@@ -1,8 +1,9 @@
 [alias]
 puf     = "!git push --force-with-lease=\"$(git rev-parse --abbrev-ref HEAD)\""
 pu      = "!git push -u origin \"$(git rev-parse --abbrev-ref HEAD)\""
-	amend = commit --amend --no-edit
-	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+amend = commit --amend --no-edit
+sendit = "git add . && git amend && git puf"
+alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 [user]
 	name = Max St-Onge
 	email = max.stonge@shopify.com
