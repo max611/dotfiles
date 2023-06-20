@@ -17,7 +17,7 @@ if [ ! -d ~/.fzf ]; then
 fi
 
 if [ ! -d ~/powerlevel10k ]; then
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/powerlevel10k
 fi
 
 for f in `ls . `
