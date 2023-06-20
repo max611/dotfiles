@@ -16,8 +16,9 @@ if [ ! -d ~/.fzf ]; then
     ~/.fzf/install
 fi
 
-if [ ! -d ~/powerlevel10k ]; then
+if [ ! -d ~/.oh-my-zsh/themes/powerlevel10k ]; then
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/themes/powerlevel10k
+    mkdir ~/powerlevel10k
 fi
 
 for f in `ls . `
@@ -34,5 +35,5 @@ if [ ! -d ~/fonts ]; then
     ~/fonts/install.sh
 fi
 
-ln -fs ~/dotfiles/powerlevel10k.zsh-theme ~/.oh-my-zsh/custom/themes/
+ln -fs ~/.oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme ~/powerlevel10k/
 
