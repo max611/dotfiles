@@ -35,6 +35,6 @@ if [ ! -d ~/fonts ]; then
     ~/fonts/install.sh
 fi
 
-cp -R ~/dotfiles/.p10k.zsh ~/.p10k.zsh
+# cp -R ~/dotfiles/.p10k.zsh ~/.p10k.zsh
 ln -fs ~/.oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme ~/powerlevel10k/
 
