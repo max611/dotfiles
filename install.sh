@@ -27,11 +27,7 @@ do
         continue
     fi
 
-    if [[ $f == "zshrc" ]] ; then
-        cp ~/dotfiles/$f ~/.${f}
-    else
-        ln -fs ~/dotfiles/$f ~/.${f}
-    fi
+    cp ~/dotfiles/$f ~/.${f}
 done
 
 if [ ! -d ~/fonts ]; then
@@ -43,6 +39,5 @@ if [ $SPIN ]; then
   sudo apt-get install -y git-absorb
 fi
 
-# cp -R ~/dotfiles/.p10k.zsh ~/.p10k.zsh
-ln -fs ~/.oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme ~/powerlevel10k/
+cp ~/.oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme ~/powerlevel10k/
 
