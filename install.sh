@@ -27,7 +27,14 @@ do
         continue
     fi
 
-    cp ~/dotfiles/$f ~/.${f}
+    if [[ $f == "functions" ]]; then
+        mkdir -p ~/.zsh
+        cp -r ~/dotfiles/$f ~/.zsh/$f
+    elif [ -d ~/dotfiles/$f ]; then
+        cp -r ~/dotfiles/$f ~/.${f}
+    else
+        cp ~/dotfiles/$f ~/.${f}
+    fi
 done
 
 if [ ! -d ~/fonts ]; then
