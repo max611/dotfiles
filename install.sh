@@ -27,7 +27,11 @@ do
         continue
     fi
 
-    ln -fs ~/dotfiles/$f ~/.${f}
+    if [[ $f == "zshrc" ]] ; then
+        cp ~/dotfiles/$f ~/.${f}
+    else
+        ln -fs ~/dotfiles/$f ~/.${f}
+    fi
 done
 
 if [ ! -d ~/fonts ]; then
